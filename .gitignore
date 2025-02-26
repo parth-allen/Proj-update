@@ -1,0 +1,173 @@
+# ===================== #
+# General Large Files   #
+# ===================== #
+*.json
+*.csv
+*.tsv
+*.xml
+*.sqlite
+*.db
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+*.sublime-*
+*.pid
+*.lock
+
+# ===================== #
+# Media & Large Assets  #
+# ===================== #
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.tiff
+*.bmp
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.flac
+*.ogg
+*.webm
+*.wmv
+
+# ===================== #
+# Compressed & Archives #
+# ===================== #
+*.zip
+*.tar
+*.gz
+*.bz2
+*.rar
+*.7z
+*.xz
+*.iso
+*.dmg
+
+# ===================== #
+# Binaries & Executables#
+# ===================== #
+*.exe
+*.dll
+*.so
+*.bin
+*.o
+*.a
+*.class
+*.jar
+*.war
+*.pyc
+*.pyo
+*.pyd
+*.whl
+*.out
+*.apk
+*.ipa
+
+# ===================== #
+# Dependencies & Builds #
+# ===================== #
+node_modules/
+vendor/
+build/
+dist/
+target/
+.cache/
+public/
+coverage/
+out/
+tmp/
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===================== #
+# OS-Specific Files     #
+# ===================== #
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ===================== #
+# IDE / Editor Files    #
+# ===================== #
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.code-workspace
+*.ccls-cache
+
+# ===================== #
+# Environment Variables #
+# ===================== #
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.secret
+config.local.json
+
+# ===================== #
+# Logs & Debugging Data #
+# ===================== #
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+debug.log
+logs/
+*.log.*
+*.trace
+
+# ===================== #
+# Temporary Files       #
+# ===================== #
+*.~lock
+*.bak
+*.temp
+*.orig
+*.rej
+*.swp
+*.swo
+*.swn
+*.back
+*.tmp
+*.cache
+*.repl_history
+*.seed
+*.pid
+nohup.out
+
+# ===================== #
+# Miscellaneous         #
+# ===================== #
+*.sql  # Large database dumps
+*.pdf  # Ignore PDFs unless necessary
+*.docx  # Ignore Word files
+*.pptx  # Ignore PowerPoint files
+*.xlsx  # Ignore Excel files
+*.ics   # Calendar files
+
+# Exclude private files
+*.pem
+*.key
+*.crt
+*.cert
+*.csr
