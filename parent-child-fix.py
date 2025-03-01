@@ -71,4 +71,4 @@ base_path = 'media_files'
 slides_data = organize_data_by_slide(asset_data, base_path)
 
 # Write organized data to JSON
-write_json(slides_data, 'parent-child-fix.json')
+write_json(slides_data, 'parent-child-fix_new.json')

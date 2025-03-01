@@ -68,7 +68,7 @@ def get_asset(element, assets, parentId, relation):
             assets.append(asset_info)
 
 
-    for blip in element.findall('./*/a:blipFill/a:blip', namespaces):
+    for blip in element.findall('./a:blip', namespaces):
         embed = blip.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed')
         asset_info = {
             'id': get_auto_id(),
@@ -79,7 +79,7 @@ def get_asset(element, assets, parentId, relation):
         }
         assets.append(asset_info)
     
-    for video in element.findall('./*/*/a:videoFile', namespaces):
+    for video in element.findall('./a:videoFile', namespaces):
         embed = video.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}link')
         asset_info = {
             'id': get_auto_id(),
@@ -90,16 +90,16 @@ def get_asset(element, assets, parentId, relation):
         }
         assets.append(asset_info)
     
-    for video in element.findall('./*/a:videoFile', namespaces):
-        embed = video.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}link')
-        asset_info = {
-            'id': get_auto_id(),
-            'parentId': parentId,
-            'name': "Video",
-            'type': "Video",
-            'value': relation.get(embed, "Rel not found")
-        }
-        assets.append(asset_info)
+    # for video in element.findall('./*/a:videoFile', namespaces):
+    #     embed = video.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}link')
+    #     asset_info = {
+    #         'id': get_auto_id(),
+    #         'parentId': parentId,
+    #         'name': "Video",
+    #         'type': "Video",
+    #         'value': relation.get(embed, "Rel not found")
+    #     }
+    #     assets.append(asset_info)
     
     for media in element.findall('./*/*/p:extLst/*/p14:media', namespaces):
         embed = media.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed')
@@ -168,6 +168,9 @@ def get_assets_and_shapes(element, assets, parentId, relation):
         './p:cSld': "Slide", 
         './p:bg': "Background", 
         './p:pic': "Picture", 
+        './p:blipFill': "Picture", 
+        './p:nvPicPr': "Picture",
+        './p:nvPr': "Picture",
         './p:spTree': "Tree", 
         './p:grpSp': "Group", 
         './p:sp': "Shape", 
