@@ -88,7 +88,7 @@ pnpm-lock.yaml
 package-lock.json
 pip-log.txt
 pip-delete-this-directory.txt
-
+ppt/
 # ===================== #
 # OS-Specific Files     #
 # ===================== #
